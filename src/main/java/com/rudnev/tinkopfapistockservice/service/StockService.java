@@ -11,5 +11,5 @@ public interface StockService {
 
     StocksDto getStockByTickers(TickersDto tickers);
 
-    public StocksPricesDto getPrices(FigiesDto figiesDto);
+    StocksPricesDto getPrices(FigiesDto figiesDto);
 }

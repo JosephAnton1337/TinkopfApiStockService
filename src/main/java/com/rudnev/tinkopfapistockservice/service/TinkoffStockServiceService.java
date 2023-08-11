@@ -78,11 +78,6 @@ public class TinkoffStockServiceService implements StockService {
         return new StocksDto(stocks);
     }
 
-    public StockPrice getPrice(String figi) {
-        var orderBook = openApi.getMarketContext().getMarketOrderbook(figi, 0).join().get();
-        return new StockPrice(figi, orderBook.getLastPrice().doubleValue());
-    }
-
     @Async
     public CompletableFuture<Optional<Orderbook>> getOrderBookByFigi(String figi) {
         log.info("Getting price {} from Tinkoff", figi);

@@ -18,5 +18,4 @@ public class ApplicationConfig {
         String ssoToken = System.getenv("ssoToken");
         return new OkHttpOpenApi(ssoToken, apiConfig.getIsSandBoxMode());
     }
-
 }

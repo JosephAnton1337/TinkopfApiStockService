@@ -6,5 +6,5 @@ import lombok.Value;
 @Value
 @AllArgsConstructor
 public class ErrorDto {
-    private String error;
+    String error;
 }
